@@ -38,7 +38,7 @@ function NetworkMenu(props) {
       defaultSelectedKeys={[networkName]}
       selectedKeys={[networkName]}
     >
-      <StyledMenuItem disabled key="title">Select ETH network</StyledMenuItem>
+      <StyledMenuItem disabled key="title">Select TNK network</StyledMenuItem>
       {options}
     </Menu>
   );

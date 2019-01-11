@@ -41,7 +41,7 @@ function AddressTableFooter(props) {
   return (
     <Div>
       <IconButton
-        text="Add address"
+        text="Add another wallet"
         icon="plus"
         onClick={onGenerateAddress}
         loading={addressListLoading}
@@ -50,14 +50,14 @@ function AddressTableFooter(props) {
         popconfirmMsg={false}
       />
       <IconButton
-        text="Check balances"
+        text="Refresh balances"
         icon="reload"
         onClick={onCheckBalances}
         loading={checkingBalances}
         error={checkingBalancesError}
         disabled={!networkReady}
         popconfirmMsg="Refresh balance?"
-      />
+      />{/*
       <IconButton
         text="Update rates"
         icon="global"
@@ -75,6 +75,7 @@ function AddressTableFooter(props) {
         type="primary"
         // onClick, loading, error, disabled, popconfirmMsg
       />
+      */ }
       <br /><br />
     </Div>
   );

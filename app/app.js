@@ -82,6 +82,9 @@ import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/symb.png
 import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/trx.png';
 import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/zrx.png';
 
+import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/tnk.png';
+import '!file-loader?name=token-icons/[name].[ext]!./images/token-icons/cgt.png';
+
 import configureStore from './store';
 
 // Will be added in the future

@@ -404,7 +404,7 @@ export function hideTokenChooser() {
 export function updateTokenInfo(addressList, newTokenInfo) {
   const tokenInfo = {
     eth: {
-      name: 'Ethereum',
+      name: 'Tinkereum',
       contractAddress: null,
       decimals: 18,
     },

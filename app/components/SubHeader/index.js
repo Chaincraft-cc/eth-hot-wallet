@@ -18,10 +18,10 @@ const Div = styled.div`
   }
 
   .anticon-lock {
-    color: red;
+    color: #d84315;
   }
   .anticon-unlock {
-    color: blue;
+    color: #2e7d32;
   }
 `;
 

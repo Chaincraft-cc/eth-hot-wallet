@@ -10,12 +10,11 @@
     <!-- Allow installing the app to the homescreen -->
     <link rel="manifest" href="manifest.json">
     <meta name="mobile-web-app-capable" content="yes">
-    <meta name="theme-color" content="#ff3333">
+    <meta name="theme-color" content="#4caf50">
     <meta
     name="description"
-    content="ETH Hot wallet is an Ethereum wallet with ERC20 Support. The keys are generated inside the browser and never sent.
-    Conection to Ethereum network is done via infura / local node.
-    Keystore is encrypted using the password, When the wallet is locked you can only view balances."
+    content="Tinkereum (TNK) Web Wallet. The keys are generated inside the browser and never sent.
+    Conection to Tinkereum network is done via TNK API or local node."
     >
     <meta property="og:image" content="/apple-touch-icon-180x180.png">
     <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
@@ -33,14 +32,14 @@
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#d55b5b">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="msapplication-TileImage" content="/mstile-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <title>ETH Hot Wallet - Ethereum Wallet with ERC20 support</title>
+    <meta name="theme-color" content="#4caf50">
+    <title>Tinker Wallet | Tinkereum (TNK) Wallet</title>
   </head>
   <body>
     <!-- Display a message if JS has been disabled on the browser. -->
     <noscript>If you're seeing this message, that means <strong>JavaScript has been disabled on your browser</strong>, please <strong>enable JS</strong> to make this app work.</noscript>
 
     <!-- The app hooks into this div -->
-    <div id="app"></div>
+    <div id="app" class="tinker"></div>
   </body>
 </html>

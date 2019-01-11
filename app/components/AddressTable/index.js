@@ -7,7 +7,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
-import { Table } from 'antd';
+import { Table, Card, Row, Col } from 'antd';
+
+import QRCode from 'qrcode.react';
 
 import CurrencyDropdown from 'components/CurrencyDropdown';
 import TokenIcon from 'components/TokenIcon';
@@ -170,12 +172,37 @@ function AddressTable(props) {
 
   const rowList = transformList(addressMap, tokenDecimalsMap, true);
   const completeRowList = addConvertRates(rowList, exchangeRates, convertTo);
+  const walletCards = completeRowList.map((row, index) => {
+    let token = row.token == 'eth' ? 'tnk' : row.token;
+    return (
+      <Card
+        style={{ width: '100%', marginBottom: '20px' }}
+        key={index}
+      >
+        <Row>
+          <Col span={12} xs={24} sm={10} md={7}>
+            <QRCode style={{marginBottom: '20px'}} value={row.address} level={'H'} />
+          </Col>
+          <Col span={12} xs={24} sm={14} md={17}>
+            <h3 style={{wordBreak: 'break-all'}}>{row.address}</h3>
+            <h2>{row.balance} {token.toUpperCase()}</h2>
+            <button className="ant-btn ant-btn-primary"
+              onClick={(ev) => {ev.preventDefault();onShowSendToken(row.address, row.token)}}>Send {token.toUpperCase()}</button>
+          </Col>
+        </Row>
+      </Card>
+    );
+  });
+
 
   return (
+    <div>
+    {walletCards}
+    {/*}
     <AddrTable
       dataSource={completeRowList}
       bordered
-      scroll={{ x: 860 }}
+      scroll={{ x: 340 }}
       pagination={false}
       locale={{
         filterTitle: null,
@@ -189,7 +216,7 @@ function AddressTable(props) {
         title="Address"
         dataIndex="address"
         key="address"
-        width="267px"
+        width="100px"
         className="columnCenter"
         colSpan="1"
         rowSpan="3"
@@ -208,7 +235,7 @@ function AddressTable(props) {
           return obj;
         }}
       />
-      {/* <Column
+       <Column
         title="#"
         dataIndex="key"
         key="key"
@@ -216,7 +243,7 @@ function AddressTable(props) {
         sorter={(a, b) => parseInt(a.key, 10) - parseInt(b.key, 10)}
         sortOrder="ascend"
         className="columnCenter"
-      /> */}
+      />
       <Column
         title="Icon"
         key="Icon"
@@ -226,12 +253,12 @@ function AddressTable(props) {
         )}
         className="columnCenter"
       />
-
+      
       <Column
         title="Token"
         dataIndex="token"
         key="token"
-        width="65px"
+        width="25px"
         className="columnCenter"
         render={(text, record) => (
           record.token.toUpperCase()
@@ -241,34 +268,34 @@ function AddressTable(props) {
         title="Balance"
         dataIndex="balance"
         key="balance"
-        width="80px"
+        width="25px"
         filters={[{
           text: 'Remove empty',
-          value: '0 ETH',
+          value: '0',
         }]}
         onFilter={(value, record) => record.balance !== value}
       />
+      
       <Column
         title={<CurrencyDropdown {...currencyDropdownProps} />}
         dataIndex="convert"
         key="convert"
         width="80px"
       />
+      
       <Column
-        width="65px"
+        width="25px"
         title="Action"
         key="action"
         render={(text, record) => (
           <span>
-            {/* <a href="#" >Show QR</a>
-            <span className="ant-divider" /> */}
-            {/* eslint-disable */}
             <a onClick={() => onShowSendToken(record.address, record.token)}>Send</a>
-            {/* eslint-enable */}
           </span>
         )}
       />
     </AddrTable >
+  */}
+    </div>
   );
 }
 

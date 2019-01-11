@@ -151,7 +151,7 @@ export function getExchangeRates() {
  */
 export function getExchangeRatesSuccess() {
   const timeString = new Date().toLocaleTimeString();
-  message.success('Exchange rates updated succesfully');
+  //message.success('Exchange rates updated succesfully');
   return {
     type: GET_EXCHANGE_RATES_SUCCESS,
     timeString,

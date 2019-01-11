@@ -1,6 +1,6 @@
 {
-  "name": "ETH Hot Wallet",
-  "theme_color": "#ff3333",
+  "name": "Tinker Wallet",
+  "theme_color": "#4caf50",
   "background_color": "#fafafa",
   "display": "standalone",
   "Scope": "/",

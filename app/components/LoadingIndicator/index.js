@@ -20,7 +20,7 @@ transform: translate(-50%, -50%);
 function LoadingIndicator() {
   return (
     <Div>
-      <Spin size="large" tip="ETH Hot Wallet" />
+      <Spin size="large" tip="Tinker Wallet" />
     </Div>
   );
 }

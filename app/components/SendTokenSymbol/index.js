@@ -14,9 +14,10 @@ const Option = Select.Option;
 function SendTokenSymbol(props) {
   const { sendTokenSymbol, tokenInfoList, onChangeFrom, locked } = props;
 
-  const optionsList = tokenInfoList.map((token) =>
-    <Option key={token} value={token}>{token.toUpperCase()}</Option>
-  );
+  const optionsList = tokenInfoList.map((token) => {
+    let tokenName = token == 'eth' ? 'tnk' : token;
+    return <Option key={token} value={token}>{tokenName.toUpperCase()}</Option>
+  });
 
   return (
     <span>

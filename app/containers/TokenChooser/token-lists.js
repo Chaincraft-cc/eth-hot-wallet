@@ -2,6 +2,16 @@
 export const TokenSelection = {
   Offline: [],
   'Local RPC': [],
+  'Tinkereum Net': [
+    {
+      symbol: 'cgt',
+      name: 'Craft Genesis Token',
+      contractAddress: '0x227412a7d92bca453b5e2f790fc8282ca2e1a686',
+      decimals: 18,
+      description: 'Chaincraft supporter Token on Tinkereum',
+      url: 'https://chaincraft.cc',
+    },
+  ],
   'Ropsten Testnet': [
     {
       symbol: 'symb',

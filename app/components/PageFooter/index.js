@@ -29,24 +29,10 @@ function PageFooter() {
   return (
     <Footer>
       <Row>
-        <Col sm={12} xs={24}>
-          {'ETH Hot Wallet - '}
-          <a href={github} target="_blank" rel="noopener">
-            Ethereum Wallet with ERC20 support (GitHub)
-          </a><br />
-          Created using: eth-lightwallet, React.js, Ant design...
+        <Col sm={24} xs={24}>
+          © 2019 <a href="https://tinkereum.org">Tinkereum</a> / <a href="https://chaincraft.cc" target="_blank">Chaincraft.cc</a> | Forked
+          with &#x2764; from <a href="https://github.com/PaulLaux/eth-hot-wallet" target="_blank">ETH Hot Wallet</a> | <a href="https://github.com/Chaincraft-cc/eth-hot-wallet" target="_blank">Check source on GitHub</a>
         </Col>
-
-        <Span>
-          <Col sm={12} xs={24}>
-            <a href="https://monetaryCoin.org" target="_blank" rel="noopener">
-              MonetaryCoin Homepage
-            </a>
-            <br />
-            ETH: 0x97325941fafde5a182e6f7e5475a592ac615a3f2
-          </Col>
-        </Span>
-
       </Row>
     </Footer>
   );
